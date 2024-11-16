@@ -152,7 +152,7 @@ def main_feature_engineering():
     st.markdown('''Below a walkthrough of Pycaret set up. ''')
 
     with st.expander('Snapshot of our Pycaret Set Up'):
-      st.image("media\\pycaret.png")
+      st.image("pycaret.png")
     
     st.markdown('''
                 Our ML framework was designed to be intuitive and graspable. Our core approach involved using PyCarret to analyze a variety of various regression models, ranging from tree based regressors to classic linear regression. 
