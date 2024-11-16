@@ -1,7 +1,7 @@
-streamlit
+streamlit==1.40.1
+pycaret==3.3.2
 pandas
 numpy
-pycaret==3.3.2
 xgboost
 matplotlib
 plotly
