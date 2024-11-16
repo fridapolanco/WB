@@ -1,7 +1,8 @@
 streamlit
+python=3.10.12
 pandas
 numpy
-pycaret
+pycaret==3.3.2
 xgboost
 matplotlib
 plotly
