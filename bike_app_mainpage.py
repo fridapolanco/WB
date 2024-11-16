@@ -10,7 +10,7 @@ from business import bike_sharing_business as business_app
 # Set page config
 st.set_page_config(page_title="Bike sharing analysis", layout="wide", page_icon="🚲")
 
-st.logo("bike.png",icon_image="ie.png")
+st.logo("bike2.png",icon_image="ie.png")
 
 # side_bar = st.sidebar
 
