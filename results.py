@@ -16,7 +16,7 @@ def main_results(data_path="bikes_clean_data.csv"):
     After fine tuning our model to the previously mentioned metric we have the below results. 
     ''')
 
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([1,3])
 
     with col1:
         results_df = pd.DataFrame({
