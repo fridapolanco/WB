@@ -10,7 +10,7 @@ from business import bike_sharing_business as business_app
 # Set page config
 st.set_page_config(page_title="Bike sharing analysis", layout="wide", page_icon="🚲")
 
-st.logo("media\\bike2.png",icon_image="media\\ie.png")
+st.logo("media/bike.png",icon_image="media/ie.png")
 
 # side_bar = st.sidebar
 
@@ -22,7 +22,7 @@ def main():
 	</div>"""
 	st.markdown(html_temp,unsafe_allow_html=True)
 
-	st.image("media\\bike0.png", width=10000)
+	st.image("media/bike0.png", width=10000)
 
 	st.header("About the analysis")
 
@@ -63,15 +63,15 @@ The different sections of this dashboard are:
 	col1,col2,col3,col4,col5 = st.columns(5)
 
 	with col1:
-		st.image("media\\nicole.jpg", caption="Frida Polanco")
+		st.image("media/nicole.jpg", caption="Frida Polanco")
 	with col2:
-		st.image("media\\nilesh.png", caption="Nilesh Mukherji")
+		st.image("media/niles.png", caption="Nilesh Mukherji")
 	with col3:
-		st.image("media\\alejandro.png", caption="Alejandro Born")
+		st.image("media/alejandro.png", caption="Alejandro Born") 
 	with col4:
-		st.image("media\\charles.png", caption="Charles Miroslaw")
+		st.image("media/charles.png", caption="Charles Miroslaw")
 	with col5:
-		st.image("media\\nic.png", caption="Niclas Tariq")
+		st.image("media/nic.png", caption="Niclas Tariq")
 
 ########################
 
