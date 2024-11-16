@@ -22,7 +22,7 @@ def main():
 	</div>"""
 	st.markdown(html_temp,unsafe_allow_html=True)
 
-	st.image("bike0.png", width=800)
+	st.image("bike0.png", width=1000)
 
 	st.header("About the analysis")
 
