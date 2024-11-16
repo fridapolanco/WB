@@ -1,5 +1,5 @@
-streamlit==1.40.1
-pycaret==3.3.2
+streamlit
+pycaret
 xgboost
 pandas
 numpy
