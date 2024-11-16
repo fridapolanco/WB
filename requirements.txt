@@ -1,6 +1,6 @@
 streamlit==1.40.1
 pycaret==3.3.2
-xgboost==1.7.1
-pandas==1.5.3
-numpy==1.23.5
-plotly==5.8.0
+xgboost
+pandas
+numpy
+plotly
