@@ -1,5 +1,4 @@
 streamlit
-python=3.10.12
 pandas
 numpy
 pycaret==3.3.2
