@@ -69,7 +69,7 @@ The different sections of this dashboard are:
 	with col3:
 		st.image("alejandro.png", caption="Alejandro Born") 
 	with col4:
-		st.image("charles.png", caption="Charles Miroslaw")
+		st.image("charles.png", caption="Charles Kudelski")
 	with col5:
 		st.image("nic.png", caption="Niclas Tariq")
 
