@@ -28,7 +28,7 @@ def main_results(data_path="bikes_clean_data.csv"):
             "RMSLE": [0.76, 0.45, 0.54, 0.81, 0.73, 0.66, 0.14],
             "MAPE": [1.08, 0.41, 0.49, 0.82, 0.65, 0.69, 0.24]
         })
-        st.write("Results when creating model without tunning:")
+        st.write("Results when creating model without tuning:")
         st.dataframe(results_df, hide_index=True)
 
     with col2:
