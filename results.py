@@ -144,6 +144,7 @@ def main_results(data_path="bikes_clean_data.csv"):
 
     # Display the plot in Streamlit
     st.pyplot(plt)
+    y_train.index = y_train.index + pd.DateOffset(years=40)
 
 #GRAPH 3
     st.subheader("Predicted and actual values, aggregated to hourly sums")
