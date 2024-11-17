@@ -28,6 +28,7 @@ def main_results(data_path="bikes_clean_data.csv"):
             "RMSLE": [0.76, 0.45, 0.54, 0.81, 0.73, 0.66, 0.14],
             "MAPE": [1.08, 0.41, 0.49, 0.82, 0.65, 0.69, 0.24]
         })
+        st.write("Results when creating model without tunning:")
         st.dataframe(results_df, hide_index=True)
 
     with col2:
@@ -36,9 +37,23 @@ def main_results(data_path="bikes_clean_data.csv"):
         - Our R^2 value approximates 0.7 (0.6665,0.7259), which indicates that **we capture roughly 70% of the variance of the data via the independent variables**. 
         - Our weighted R^2 approximates 0.2695, but we cannot say that the value is not 0 with a 95% confidence level. Indicating it is possible our model entirely under predicts, and thus the attempt to train the model to incur errors via overpredicting alone was not achieved. 
         - A simple solution would be to simply add a bias (X% of the rolling count, for example) which could shift the predictions upwards. However, this would reduce the overall accuracy of the model and thus was not attempted.                
-        - MAE: on average our model predicts +/- 58 bikes
-        - RMSE: on average our model predicts +/- 84 bikes
+        - MAE: on average our model predicts +/- 54 bikes
+        - RMSE: on average our model predicts +/- 81 bikes
         ''')
+
+    st.write("Results after fine-tuning our model")
+    results_df_2 = pd.DataFrame({
+        "Fold":["Mean", "STDV"],
+        "MAE": [54.7732, 21.8539],
+        "MSE": [7482.1364,5723.3286],
+        "RMSE": [81.3970,29.2688],
+        "R2": [0.6670,0.1447],
+        "RMSLE": [0.6411,0.0863],
+        "MAPE": [0.6231,0.1109],
+        "Weighted R Squared":[0.2398,0.1510]
+        "})
+    
+        st.dataframe(results_df_2, hide_index=True)
 
 #GRAPH1
     st.subheader("Predicted vs Unpredicted values")
