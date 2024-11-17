@@ -42,6 +42,7 @@ def main_results(data_path="bikes_clean_data.csv"):
         ''')
 
     st.write("Results after fine-tuning our model")
+
     results_df_2 = pd.DataFrame({
         "Fold":["Mean", "STDV"],
         "MAE": [54.7732, 21.8539],
@@ -53,8 +54,8 @@ def main_results(data_path="bikes_clean_data.csv"):
         "Weighted R Squared":[0.2398,0.1510]
         "})
     
-        st.dataframe(results_df_2, hide_index=True)
-
+    st.dataframe(results_df_2, hide_index=True)
+    
 #GRAPH1
     st.subheader("Predicted vs Unpredicted values")
 
