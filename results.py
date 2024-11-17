@@ -41,20 +41,20 @@ def main_results(data_path="bikes_clean_data.csv"):
         - RMSE: on average our model predicts +/- 81 bikes
         ''')
 
-    st.write("Results after fine-tuning our model")
+    #st.write("Results after fine-tuning our model")
 
-    results_df_2 = pd.DataFrame({
-        "Fold":["Mean", "STDV"],
-        "MAE": [54.7732, 21.8539],
-        "MSE": [7482.1364,5723.3286],
-        "RMSE": [81.3970,29.2688],
-        "R2": [0.6670,0.1447],
-        "RMSLE": [0.6411,0.0863],
-        "MAPE": [0.6231,0.1109],
-        "Weighted R Squared":[0.2398,0.1510]
-        "})
+    # results_df_2 = pd.DataFrame({
+    #     "Fold":["Mean", "STDV"],
+    #     "MAE": [54.7732, 21.8539],
+    #     "MSE": [7482.1364,5723.3286],
+    #     "RMSE": [81.3970,29.2688],
+    #     "R2": [0.6670,0.1447],
+    #     "RMSLE": [0.6411,0.0863],
+    #     "MAPE": [0.6231,0.1109],
+    #     "Weighted R Squared":[0.2398,0.1510]
+    #     "})
     
-    st.dataframe(results_df_2, hide_index=True)
+    # st.dataframe(results_df_2, hide_index=True)
     
 #GRAPH1
     st.subheader("Predicted vs Unpredicted values")
