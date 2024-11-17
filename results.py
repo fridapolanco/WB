@@ -41,7 +41,7 @@ def main_results(data_path="bikes_clean_data.csv"):
         - RMSE: on average our model predicts +/- 81 bikes
         ''')
     
-     st.write("Results after fine-tuning our model")
+    st.write("Results after fine-tuning our model")
     
     results_df_2 = pd.DataFrame({
         "Fold": ["Mean", "STDV"],
@@ -51,7 +51,7 @@ def main_results(data_path="bikes_clean_data.csv"):
         "R2": [0.6670, 0.1447],
         "RMSLE": [0.6411, 0.0863],
         "MAPE": [0.6231, 0.1109],
-        "Weighted R Squared": [0.2398, 0.1510]  # Comma was missing
+        "Weighted R Squared": [0.2398, 0.1510],  # Comma was missing
     })
     
     st.dataframe(results_df_2, hide_index=True)
