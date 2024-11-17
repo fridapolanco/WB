@@ -98,14 +98,16 @@ def main_results(data_path="bikes_clean_data.csv"):
     # Ensure that y_test and y_pred are sorted by index for continuity in the line
     y_test = y_test.sort_index()
     y_pred = pd.Series(y_pred, index=y_test.index).sort_index()
-
+    y_test.index = y_test.index + pd.DateOffset(years=40)
+    y_pred.index = y_pred.index + pd.DateOffset(years=40)
+    
     # Resampling to daily frequency for smoother visualization (can change to 'W' for weekly)
     y_test_daily = y_test.resample('D').sum()  # Daily resampling
     y_pred_daily = y_pred.resample('D').sum()
 
     # Plotting actual vs predicted daily counts
     plt.figure(figsize=(12, 6))
-
+    
     # Plot actual values
     plt.plot(y_test_daily.index, y_test_daily, label='Actual', color='blue', marker='o', linewidth=2)
 
