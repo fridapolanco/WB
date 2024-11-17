@@ -75,44 +75,21 @@ def main_results(data_path="bikes_clean_data.csv"):
     y_pred_weekly = y_pred.resample('W').sum()
 
     # # Plotting actual vs. predicted values
-    # plt.figure(figsize=(14, 7))
+    plt.figure(figsize=(14, 7))
 
-    # # Plot actual values as a solid line
-    # plt.plot(y_test_weekly.index, y_test_weekly, 'ro', label='Actual', color='red', linewidth=1.5)
-    # # Plot predicted values as a solid line
-    # plt.plot(y_test_weekly.index, y_pred_weekly, 'bo', label='Predicted', color='grey', linewidth=1.5)
+    # Plot actual values as a solid line
+    plt.plot(y_test_weekly.index, y_test_weekly, 'ro', label='Actual', color='red', linewidth=1.5)
+    # Plot predicted values as a solid line
+    plt.plot(y_test_weekly.index, y_pred_weekly, 'bo', label='Predicted', color='grey', linewidth=1.5)
 
-    # # Adding labels and title
-    # plt.xlabel('Date')
-    # plt.ylabel('Target')
-    # plt.title('Time Series: Actual vs Predicted')
-    # plt.legend()
+    # Adding labels and title
+    plt.xlabel('Date')
+    plt.ylabel('Target')
+    plt.title('Time Series: Actual vs Predicted')
+    plt.legend()
 
-    # # Use Streamlit to display the plot
-    # st.pyplot(plt)
-
-    # Assuming y_test_weekly and y_pred_weekly are PySpark DataFrames, convert them to pandas
-    y_test_weekly_pd = y_test_weekly.toPandas()
-    y_pred_weekly_pd = y_pred_weekly.toPandas()
-    
-    # Combine the actual and predicted data into a single DataFrame
-    combined_df = pd.DataFrame({
-        'Date': y_test_weekly_pd['index'],  # Replace 'index' with the actual column name for dates
-        'Actual': y_test_weekly_pd['target'],  # Replace 'target' with your actual target column
-        'Predicted': y_pred_weekly_pd['target']  # Replace 'target' with the predicted target column
-    })
-    
-    # Melt the DataFrame to make it suitable for Plotly Express
-    melted_df = combined_df.melt(id_vars='Date', value_vars=['Actual', 'Predicted'], 
-                                 var_name='Type', value_name='Value')
-    
-    # Create an interactive line plot
-    fig = px.line(melted_df, x='Date', y='Value', color='Type',
-                  labels={'Date': 'Date', 'Value': 'Target'},
-                  title='Time Series: Actual vs Predicted')
-    
-    # Use Streamlit to display the Plotly figure
-    st.plotly_chart(fig)
+    # Use Streamlit to display the plot
+    st.pyplot(plt)
 
 #GRAPH 2 
     st.subheader("Predicted and actual values, aggregated to daily sums")
